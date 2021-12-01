@@ -23,8 +23,6 @@ defmodule InstrumentStoreSelectWeb.GuitarLive.Index do
      |> assign(:selected_brand, brand)}
   end
 
-  require Logger
-
   @impl true
   def handle_event("set-filter", %{"_target" => ["model"], "model" => model}, socket) do
     selected_brand = socket.assigns.selected_brand
