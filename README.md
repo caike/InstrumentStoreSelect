@@ -2,7 +2,7 @@
 
 This is a demo LiveView app which illustrates a second dropdown that's dynamically populated according to the value of the first dropdown.
 
-![](docs/image.png)
+![](docs/listing-guitars.gif)
 
 To start your Phoenix server:
 
