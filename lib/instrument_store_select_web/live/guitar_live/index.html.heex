@@ -1,0 +1,40 @@
+<h1>Listing Guitars</h1>
+
+<form phx-change="set-filter">
+  <select name="brand" id="brand">
+    <option/>
+    <%= for brand <- @brands do %>
+      <option value={brand} 
+              selected={if @selected_brand == brand, do: "selected"}>
+              <%= brand %>
+      </option>
+    <% end %>
+  </select>
+
+  <select name="model" id="model">
+    <option/>
+    <%= for model <- @models do %>
+      <option value={model}><%= model %></option>
+    <% end %>
+  </select>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Year</th>
+
+    </tr>
+  </thead>
+  <tbody id="guitars">
+    <%= for guitar <- @guitars do %>
+      <tr id={"guitar-#{guitar.id}"}>
+        <td><%= guitar.brand %></td>
+        <td><%= guitar.model %></td>
+        <td><%= guitar.year %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

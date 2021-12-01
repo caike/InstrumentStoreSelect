@@ -12,6 +12,7 @@ config :instrument_store_select,
 
 # Configures the endpoint
 config :instrument_store_select, InstrumentStoreSelectWeb.Endpoint,
+  server: true,
   url: [host: "localhost"],
   render_errors: [view: InstrumentStoreSelectWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: InstrumentStoreSelect.PubSub,
